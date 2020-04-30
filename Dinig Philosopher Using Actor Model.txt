@@ -1,0 +1,12 @@
+Here, There are philosophers. 
+He may be Either Thinking or Eating or Requesting For chopsticks or just ended eating. So these are working as an actor
+
+Actors have mailbox to store information about chopsticks
+
+Wiater is responsible to allow to philosopher to take chopsticks. as chopsticks may have 2 states. 
+Either Available or Unavailable
+
+Props is used to specify actors creation,
+OnRecieve (overrrided method of Philosopher) It implements the behavior of the actor
+
+Waiter will let the philosopher to pick up chopsticks if both of these (left and right) are available,  otherwise he will have to wait
