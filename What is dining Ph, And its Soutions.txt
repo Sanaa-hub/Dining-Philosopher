@@ -1,0 +1,34 @@
+	DINING PHILOSOPHER PROBLEM:
+
+There is a circular dining table and Suppose there are 5 philosopher and 5 chopsticks, 
+Every philosophers may be in 2 states,
+either Thinking or Eating
+
+For Eating, Each philosopher need 2 chopsticks
+For thinking, Nothing is needed.
+
+So if all the philosopher took 1 chopstick, for eating, then there will not be enough chopsticks that everybody could have 2.
+As a result, all of them will be waiting for each others to release 1 chopstick
+Hence, There is a limited resources. 
+This problem is know as race condition problem/ deadlock
+
+The above concept is called as  dining philosopher problem.
+
+SOLUTIONS;
+
+1) Using semaphores
+	it uses 2 integer variables. wait(S) , Signal(S)
+	it work in a way that if a chopstick is already in use, it will block the remaining processes.
+it basically send data in a critical section, where 2nd process can only be enter if 1st process has completed its execution
+
+This may also cause deadlock
+
+
+2)Using Monitors
+ This is the most efficient ways, because it cannot cause deadlock or starvation.
+
+It  usees the 2 conditional variables.
+x.wait(); --> it suspend the execution of calling process of condition x
+
+x.signal(); --> resume t he execution of some processes blocked after a wait on the same condition
+
